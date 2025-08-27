@@ -36,12 +36,12 @@ public class LeftRotateTheArrayByOne {
             System.out.print(arr[i]+" ");
         }
 
-        /*
+        /*-----------------------------------------------------------
             Time Complexity: O(n)
                 (one loop shifts elements, one loop prints them)
             Space Complexity: O(1)
                 (no extra array is used, only one temp variable)
-         */
+         ------------------------------------------------------------*/
     }
 
     public static void main(String[] args){
