@@ -1,25 +1,13 @@
-package LinkedList;
+package LinkedList.Singly;
 
 // Program: Convert Array to Linked List (Reusable Method)
 
-class Node {
-    int data;
-    Node next;
-
-    Node(int data) {
-        this.data = data;
-        this.next = null;
-    }
-}
-
 public class ArrayToLinkedList {
 
-    // Method to convert array into linked list
     private static Node convertArr2LL(int[] arr) {
-        // Step 1: Create head node from first element of array
+
         Node head = new Node(arr[0]);
 
-        // 'mover' will keep track of the last node of linked list
         Node mover = head;
 
         // Step 2: Loop through remaining elements of array
@@ -29,7 +17,6 @@ public class ArrayToLinkedList {
             mover = temp;                 // update mover to new last node
         }
 
-        // Step 3: Return head (starting point of Linked List)
         return head;
     }
 
