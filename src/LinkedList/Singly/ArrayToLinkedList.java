@@ -1,20 +1,29 @@
 package LinkedList.Singly;
 
-// Program: Convert Array to Linked List (Reusable Method)
-
 public class ArrayToLinkedList {
 
-    private static Node convertArr2LL(int[] arr) {
+    // Inner Node class
+    static class Node {
+        int data;
+        Node next;
+
+        Node(int data) {
+            this.data = data;
+            this.next = null;
+        }
+    }
+
+    // Convert array to linked list
+    public static Node convertArr2LL(int[] arr) {
+        if (arr.length == 0) return null;
 
         Node head = new Node(arr[0]);
-
         Node mover = head;
 
-        // Step 2: Loop through remaining elements of array
         for (int i = 1; i < arr.length; i++) {
-            Node temp = new Node(arr[i]); // create new node
-            mover.next = temp;            // link last node to new node
-            mover = temp;                 // update mover to new last node
+            Node temp = new Node(arr[i]);
+            mover.next = temp;
+            mover = temp;
         }
 
         return head;
@@ -26,6 +35,11 @@ public class ArrayToLinkedList {
         // Convert array to linked list
         Node head = convertArr2LL(arr);
 
-        System.out.println(head.data);
+        // Print linked list
+        Node current = head;
+        while (current != null) {
+            System.out.print(current.data + " ");
+            current = current.next;
+        }
     }
 }
