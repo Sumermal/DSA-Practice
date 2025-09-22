@@ -39,16 +39,6 @@ public class ArrayToLinkedList {
         // Convert array to linked list
         Node head = convertArr2LL(arr);
 
-        // Print first element of LL (head)
-        System.out.println("Head Node Data: " + head.data);
-
-        // Print the full linked list
-        System.out.print("Linked List: ");
-        Node temp = head;
-        while (temp != null) {
-            System.out.print(temp.data + " -> ");
-            temp = temp.next;
-        }
-        System.out.println("NULL");
+        System.out.println(head.data);
     }
 }
